@@ -1,0 +1,32 @@
+﻿@model Practise.Models.Employees
+@{
+}
+<h1>Add Employess</h1>
+
+<form method="post" action="AddEmployees" enctype="multipart/form-data" class="mt-4">
+    <div class="form-group">
+        <label asp-for="EmpName" class="form-label">@Html.DisplayNameFor(e => e.EmpName)</label>
+        <input asp-for="EmpName" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="EmpAddress" class="form-label">@Html.DisplayNameFor(e => e.EmpAddress)</label>
+        <input asp-for="EmpAddress" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="EmpPhone" class="form-label">@Html.DisplayNameFor(e => e.EmpPhone)</label>
+        <input asp-for="EmpPhone" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="EmpSalary" class="form-label">@Html.DisplayNameFor(e => e.EmpSalary)</label>
+        <input asp-for="EmpSalary" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="EmpDesignation" class="form-label">@Html.DisplayNameFor(e => e.EmpDesignation)</label>
+        <input asp-for="EmpDesignation" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="Image" class="form-label">Image Upload</label>
+        <input asp-for="Image" class="form-control" type="file" name="imageFile" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

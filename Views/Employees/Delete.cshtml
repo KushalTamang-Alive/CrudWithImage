@@ -1,0 +1,45 @@
+﻿@model Practise.Models.Employees
+<h1 class="caption-top ">Delete Employee</h1>
+<h2 class="mt-6">Please Confirm Before Deleting</h2>
+
+<div>
+    <h3>Employee</h3>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.EmpName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.EmpName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.EmpAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.EmpAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.EmpDesignation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.EmpDesignation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.EmpSalary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.EmpSalary)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(e => e.EmpPhone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(e => e.EmpPhone)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="EmpID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+        <a asp-action="Index">Employee List</a>
+    </form>
+</div>

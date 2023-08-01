@@ -1,0 +1,41 @@
+﻿@model List<Practise.Models.Employees>
+
+<h1>List of the Employees</h1>
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Salary</th>
+            <th>Post</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Employee in Model)
+        {
+            <tr>
+                <td>@Employee.EmpID</td>
+                <td>@Employee.EmpName</td>
+                <td>@Employee.EmpAddress</td>
+                <td>@Employee.EmpPhone</td>
+                <td>@Employee.EmpSalary.ToString()</td>
+                <td>@Employee.EmpDesignation</td>
+                <td>
+                    <img src="@Url.Content("~/images/" + Employee.Image)" alt="Image" width="100" height="100" />
+                </td>
+                <td>
+                    <button>
+                        <a href="/Employees/EditEmployees/@Employee.EmpID">Edit</a>
+                    </button>
+                    <button>
+                        <a href="/Employees/Delete/@Employee.EmpID">Delete</a>
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
